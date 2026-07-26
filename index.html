@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bell Fire & Safety Services | Kitchen Exhaust & Hood Cleaning — South Florida</title>
+<meta name="description" content="Kitchen exhaust, hood, duct, and fan cleaning for restaurants and food trucks across South Florida. NFPA 96 focused. Call or text Jay Bell: 561-255-8506.">
+<link rel="icon" href="logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0a0a0c;
+    --panel:#101014;
+    --red:#e2131f;
+    --red-deep:#7a0e14;
+    --steel:#c9ced6;
+    --steel-dim:#8a94a3;
+    --white:#f4f4f4;
+    --line: rgba(201,206,214,0.18);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--black);
+    color:var(--white);
+    font-family:'Barlow', sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Oswald', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+    font-weight:700;
+    color:var(--white);
+  }
+  .mono{font-family:'JetBrains Mono', monospace;}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 24px;}
+  .eyebrow{
+    display:inline-block;
+    font-family:'Oswald',sans-serif;
+    font-size:13px;
+    letter-spacing:0.18em;
+    color:var(--red);
+    font-weight:600;
+    margin-bottom:14px;
+  }
+  section{padding:96px 0;}
+  .btn{
+    display:inline-block;
+    font-family:'Oswald',sans-serif;
+    font-weight:600;
+    font-size:16px;
+    letter-spacing:0.05em;
+    padding:16px 30px;
+    border-radius:2px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{
+    background:var(--red);
+    color:#fff;
+    box-shadow:0 0 0 1px var(--red-deep) inset;
+  }
+  .btn-primary:hover{box-shadow:0 6px 22px rgba(226,19,31,0.35);}
+  .btn-outline{
+    background:transparent;
+    color:var(--steel);
+    box-shadow:0 0 0 1px var(--steel-dim) inset;
+  }
+  .btn-outline:hover{box-shadow:0 0 0 1px var(--steel) inset; color:#fff;}
+
+  /* NAV */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    background:rgba(10,10,12,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 24px; max-width:1180px; margin:0 auto;
+  }
+  .brand{display:flex; align-items:center; gap:12px;}
+  .brand img{height:40px; width:auto;}
+  .brand span{
+    font-family:'Oswald',sans-serif; font-weight:700; font-size:18px; letter-spacing:0.03em;
+  }
+  .brand .fire{color:var(--red);}
+  .brand .safety{color:var(--steel);}
+  .navlinks{display:flex; align-items:center; gap:32px;}
+  .navlinks a{
+    font-family:'Oswald',sans-serif; font-size:14px; letter-spacing:0.06em; color:var(--steel-dim);
+    text-transform:uppercase;
+  }
+  .navlinks a:hover{color:var(--white);}
+  .nav-cta{
+    background:var(--red); color:#fff; padding:10px 18px; font-family:'Oswald',sans-serif;
+    font-size:14px; font-weight:600; letter-spacing:0.04em; border-radius:2px;
+  }
+  .navToggle{display:none; background:none; border:none; color:var(--white); font-size:26px;}
+
+  /* HERO */
+  .hero{
+    position:relative;
+    padding-top:150px;
+    padding-bottom:0;
+    min-height:640px;
+    display:flex;
+    align-items:stretch;
+    overflow:hidden;
+  }
+  .hero-left{
+    flex:0 0 46%;
+    background:var(--panel);
+    display:flex; align-items:center; justify-content:center;
+    padding:40px;
+    clip-path: polygon(0 0, 100% 0, 88% 100%, 0% 100%);
+    position:relative;
+  }
+  .hero-left img{ max-width:480px; width:100%; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.6));}
+  .hero-right{
+    flex:1;
+    display:flex; flex-direction:column; justify-content:center;
+    padding:60px 5% 60px 8%;
+  }
+  .hero-right h1{font-size:clamp(32px,4.2vw,56px); line-height:1.05; margin-bottom:20px;}
+  .hero-right .sub{
+    font-family:'Barlow',sans-serif; font-style:italic; color:var(--steel);
+    font-size:19px; margin-bottom:34px; max-width:520px;
+  }
+  .hero-cta{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:30px;}
+  .trust-line{
+    font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:0.06em;
+    color:var(--steel-dim); text-transform:uppercase;
+  }
+  .trust-line b{color:var(--steel); font-weight:600;}
+
+  /* TRUST STRIP */
+  .strip{
+    border-top:1px solid var(--red-deep);
+    border-bottom:1px solid var(--red-deep);
+    background:#0d0507;
+    padding:36px 0;
+  }
+  .strip .wrap{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:32px;
+  }
+  .strip-item .eyebrow{margin-bottom:8px;}
+  .strip-item p{color:var(--steel-dim); font-size:14.5px;}
+
+  /* SERVICES */
+  .section-head{margin-bottom:48px; max-width:640px;}
+  .section-head p{color:var(--steel-dim); font-size:17px;}
+  .services-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .service-card{
+    background:var(--black);
+    padding:34px 28px;
+    border-top:3px solid var(--red);
+  }
+  .service-card h3{font-size:19px; margin-bottom:12px; letter-spacing:0.01em;}
+  .service-card p{color:var(--steel-dim); font-size:15px;}
+
+  /* REVEAL ON SCROLL */
+  .reveal{
+    opacity:0; transform:translateY(28px);
+    transition:opacity .7s ease, transform .7s ease;
+  }
+  .reveal.is-visible{opacity:1; transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1; transform:none; transition:none;}
+  }
+
+  /* OUR WORK / GALLERY */
+  .featured-ba{
+    border:1px solid var(--red-deep);
+    margin-bottom:40px;
+    position:relative;
+  }
+  .featured-ba img{width:100%; display:block;}
+  .featured-ba .cap{
+    position:absolute; bottom:0; left:0; right:0;
+    background:linear-gradient(0deg, rgba(0,0,0,0.85), transparent);
+    padding:24px 24px 16px;
+    font-family:'Oswald',sans-serif; letter-spacing:0.04em; font-size:14px;
+    color:var(--steel); text-transform:uppercase;
+  }
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:18px;
+  }
+  .gallery-item{
+    position:relative;
+    overflow:hidden;
+    border:1px solid var(--line);
+    cursor:pointer;
+    background:var(--panel);
+    aspect-ratio: 4 / 3;
+  }
+  .gallery-item img{
+    width:100%; height:100%; object-fit:cover;
+    transition:transform .5s ease, filter .5s ease;
+    filter:grayscale(15%);
+  }
+  .gallery-item:hover img{transform:scale(1.06); filter:grayscale(0%);}
+  .gallery-item .tag{
+    position:absolute; bottom:0; left:0; right:0;
+    background:linear-gradient(0deg, rgba(0,0,0,0.88), transparent 85%);
+    color:var(--white); font-family:'Oswald',sans-serif; font-size:13px;
+    letter-spacing:0.04em; text-transform:uppercase;
+    padding:26px 14px 10px;
+    opacity:0; transform:translateY(6px);
+    transition:opacity .3s ease, transform .3s ease;
+  }
+  .gallery-item:hover .tag{opacity:1; transform:translateY(0);}
+
+  /* LIGHTBOX */
+  .lightbox{
+    display:none; position:fixed; inset:0; z-index:100;
+    background:rgba(6,6,7,0.94);
+    align-items:center; justify-content:center;
+    padding:40px;
+  }
+  .lightbox.open{display:flex;}
+  .lightbox img{max-width:min(900px,90vw); max-height:80vh; border:1px solid var(--red-deep);}
+  .lightbox .lb-cap{
+    position:absolute; bottom:60px; left:0; right:0; text-align:center;
+    font-family:'Oswald',sans-serif; letter-spacing:0.05em; color:var(--steel);
+    text-transform:uppercase; font-size:14px;
+  }
+  .lightbox .lb-close{
+    position:absolute; top:28px; right:34px; font-size:32px; color:var(--steel);
+    cursor:pointer; font-family:'Oswald',sans-serif; line-height:1;
+  }
+  .lightbox .lb-close:hover{color:var(--red);}
+
+  .grease-visual{
+    display:flex; gap:36px; align-items:stretch; flex-wrap:wrap;
+  }
+  .grease-visual img{
+    width:220px; height:100%; min-height:260px; object-fit:cover;
+    border:1px solid var(--red-deep);
+  }
+  .grease-visual .gv-text{flex:1; min-width:280px;}
+
+  /* CITATION / WHY IT MATTERS */
+  .citation{
+    background:var(--panel);
+    border:1px solid var(--red-deep);
+    border-left:4px solid var(--red);
+    padding:36px 40px;
+    margin-bottom:34px;
+  }
+  .citation .mono{
+    color:var(--steel); font-size:14.5px; line-height:1.8;
+  }
+  .citation .mono b{color:var(--red);}
+  .why-text{color:var(--steel-dim); font-size:16.5px; max-width:760px;}
+
+  /* TABLES */
+  table{width:100%; border-collapse:collapse; margin-top:10px;}
+  th,td{
+    text-align:left; padding:16px 18px; font-size:15px;
+    border-bottom:1px solid var(--line);
+  }
+  th{
+    font-family:'Oswald',sans-serif; letter-spacing:0.05em; text-transform:uppercase;
+    font-size:13px; color:var(--red); border-bottom:2px solid var(--red-deep);
+  }
+  td.num{font-family:'JetBrains Mono',monospace; color:var(--steel);}
+  .table-wrap{overflow-x:auto; margin-bottom:20px;}
+  .fine{color:var(--steel-dim); font-size:14px; font-style:italic; margin-top:14px;}
+
+  /* ABOUT */
+  .about-box{
+    display:flex; gap:48px; align-items:center; flex-wrap:wrap;
+  }
+  .about-box .icon-col{flex:0 0 160px;}
+  .about-box .icon-col img{width:140px;}
+  .about-box .text-col{flex:1; min-width:280px;}
+  .about-box p{color:var(--steel-dim); font-size:16.5px; margin-bottom:14px;}
+
+  /* CONTACT */
+  .contact-split{
+    display:flex; gap:0; border:1px solid var(--line);
+  }
+  .contact-left{
+    flex:0 0 40%; background:var(--panel); padding:48px 40px;
+    border-right:1px solid var(--red-deep);
+    display:flex; flex-direction:column; align-items:center; text-align:center;
+  }
+  .phone-icon-btn{
+    width:64px; height:64px; border-radius:50%;
+    border:2px solid var(--red);
+    display:flex; align-items:center; justify-content:center;
+    margin:6px 0 18px;
+    transition:background .2s ease, transform .15s ease;
+  }
+  .phone-icon-btn:hover{background:var(--red); transform:translateY(-2px);}
+  .phone-icon-btn svg{width:26px; height:26px; stroke:var(--red);}
+  .phone-icon-btn:hover svg{stroke:#fff;}
+  .contact-left .bignum{
+    font-family:'Oswald',sans-serif; font-size:clamp(26px,3vw,34px); color:var(--red);
+    font-weight:700; margin:0 0 6px;
+  }
+  .contact-left p{color:var(--steel-dim); font-size:15px; margin-bottom:6px;}
+  .contact-right{flex:1; padding:48px 40px;}
+  .field{margin-bottom:18px;}
+  .field label{
+    display:block; font-family:'Oswald',sans-serif; font-size:12.5px; letter-spacing:0.08em;
+    text-transform:uppercase; color:var(--steel-dim); margin-bottom:8px;
+  }
+  .field input, .field textarea{
+    width:100%; background:#0d0d10; border:1px solid var(--line); color:var(--white);
+    padding:13px 14px; font-family:'Barlow',sans-serif; font-size:15px; border-radius:2px;
+  }
+  .field input:focus, .field textarea:focus{
+    outline:none; border-color:var(--red);
+  }
+  .field textarea{resize:vertical; min-height:110px;}
+  .form-note{color:var(--steel-dim); font-size:13.5px; margin-top:10px;}
+
+  footer{
+    border-top:1px solid var(--red-deep);
+    padding:36px 0; text-align:center;
+  }
+  footer p{color:var(--steel-dim); font-size:13.5px;}
+  footer .tag{font-family:'Oswald',sans-serif; letter-spacing:0.08em; font-size:12.5px; color:var(--steel); margin-bottom:8px; text-transform:uppercase;}
+
+  @media (max-width: 900px){
+    .hero{flex-direction:column; padding-top:130px;}
+    .hero-left{clip-path:none; flex:none; padding:30px;}
+    .hero-right{padding:40px 6%;}
+    .strip .wrap{grid-template-columns:1fr 1fr;}
+    .services-grid{grid-template-columns:1fr;}
+    .gallery-grid{grid-template-columns:1fr 1fr;}
+    .grease-visual{flex-direction:column;}
+    .grease-visual img{width:100%; min-height:180px;}
+    .about-box{flex-direction:column; text-align:center;}
+    .contact-split{flex-direction:column;}
+    .contact-left{border-right:none; border-bottom:1px solid var(--red-deep);}
+    .navlinks{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="brand">
+      <img src="logo-icon.png" alt="Bell Fire & Safety Services">
+      <span><span class="fire">BELL</span> <span class="safety">FIRE &amp; SAFETY</span></span>
+    </div>
+    <div class="navlinks">
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
+      <a href="#why">Why It Matters</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="tel:5612558506" class="nav-cta">Call Now</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-left">
+    <img src="logo.png" alt="Bell Fire & Safety Services logo">
+  </div>
+  <div class="hero-right">
+    <span class="eyebrow">SOUTH FLORIDA</span>
+    <h1>Kitchen Exhaust &amp; Hood Cleaning</h1>
+    <p class="sub">Protecting lives. Safeguarding property. Ensuring compliance.</p>
+    <div class="hero-cta">
+      <a href="tel:5612558506" class="btn btn-primary">Call / Text 561-255-8506</a>
+      <a href="#contact" class="btn btn-outline">Request a Quote</a>
+    </div>
+    <p class="trust-line"><b>Fully Insured</b> &nbsp;·&nbsp; <b>NFPA 96 Focused</b> &nbsp;·&nbsp; <b>Locally Owned — Jay Bell</b></p>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="strip-item">
+      <div class="eyebrow">NFPA 96</div>
+      <p>The national fire code governing commercial kitchen exhaust cleaning.</p>
+    </div>
+    <div class="strip-item">
+      <div class="eyebrow">Inspection Ready</div>
+      <p>Documentation your fire marshal and insurance carrier expect to see.</p>
+    </div>
+    <div class="strip-item">
+      <div class="eyebrow">Recurring Service</div>
+      <p>Quarterly, semi-annual, or annual — scheduled around your kitchen's volume.</p>
+    </div>
+    <div class="strip-item">
+      <div class="eyebrow">Local &amp; Direct</div>
+      <p>Call or text Jay directly. No call centers, no subcontractors.</p>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Full Scope, Every Visit</span>
+      <h2 style="font-size:34px; margin-bottom:14px;">What's Included</h2>
+      <p>Every cleaning covers the full system — not just what's visible from the kitchen floor.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Hood Cleaning</h3>
+        <p>Full degreasing of the hood interior, exterior, and plenum chamber.</p>
+      </div>
+      <div class="service-card">
+        <h3>Duct Cleaning</h3>
+        <p>Interior duct run cleaned from the hood connection through to the roof.</p>
+      </div>
+      <div class="service-card">
+        <h3>Exhaust Fan Service</h3>
+        <p>Rooftop fan blades, housing, and grease cup degreased and inspected.</p>
+      </div>
+      <div class="service-card">
+        <h3>Filter Care</h3>
+        <p>Baffle filters soaked, cleaned, and reinstalled — not just wiped down.</p>
+      </div>
+      <div class="service-card">
+        <h3>Compliance Documentation</h3>
+        <p>Before/after photos, a dated service tag, and a certificate for your records.</p>
+      </div>
+      <div class="service-card">
+        <h3>Recurring Maintenance</h3>
+        <p>A schedule matched to your cooking volume — not a one-size-fits-all visit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Real Jobs, Real Results</span>
+      <h2 style="font-size:34px; margin-bottom:14px;">Our Work</h2>
+      <p>A look inside the systems we've cleaned — hoods, ducts, and rooftop fans.</p>
+    </div>
+
+    <div class="featured-ba reveal">
+      <img src="photos/before-after.jpg" alt="Duct interior before and after cleaning">
+      <div class="cap">Duct interior — same system, before and after</div>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item reveal" data-cap="Full hood degreasing, fully contained">
+        <img src="photos/gallery-1.jpg" alt="Technician degreasing a kitchen hood">
+        <div class="tag">Hood Degreasing</div>
+      </div>
+      <div class="gallery-item reveal" data-cap="Hood cleaning in progress">
+        <img src="photos/gallery-2.jpg" alt="Technician cleaning hood interior">
+        <div class="tag">Hood Cleaning</div>
+      </div>
+      <div class="gallery-item reveal" data-cap="Heavy-duty degreasing, full PPE">
+        <img src="photos/gallery-3.jpg" alt="Technician with respirator cleaning hood with heavy foam">
+        <div class="tag">Deep Clean</div>
+      </div>
+      <div class="gallery-item reveal" data-cap="No shortcuts — full interior duct access">
+        <img src="photos/gallery-4.jpg" alt="Technician accessing interior of duct">
+        <div class="tag">Duct Access</div>
+      </div>
+      <div class="gallery-item reveal" data-cap="Rooftop exhaust fan, fully degreased">
+        <img src="photos/gallery-5.jpg" alt="Technician cleaning rooftop exhaust fan">
+        <div class="tag">Fan Service</div>
+      </div>
+      <div class="gallery-item reveal" data-cap="Rooftop fan teardown and cleaning">
+        <img src="photos/gallery-6.jpg" alt="Two technicians servicing rooftop exhaust fan">
+        <div class="tag">Team Service</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <span class="lb-close" id="lbClose">&times;</span>
+  <img id="lbImg" src="" alt="">
+  <div class="lb-cap" id="lbCap"></div>
+</div>
+
+<section id="why" style="background:var(--panel);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The Code, In Plain Terms</span>
+      <h2 style="font-size:34px; margin-bottom:14px;">Why It Matters</h2>
+    </div>
+    <div class="citation">
+      <p class="mono"><b>§ NFPA 96</b> — Standard for Ventilation Control and Fire Protection of Commercial Cooking Operations. Requires exhaust systems to be kept free of grease buildup and cleaned on a schedule based on cooking volume, with dated service records kept on file.</p>
+    </div>
+    <div class="grease-visual">
+      <img src="photos/grease-closeup.jpg" alt="Grease buildup inside an uncleaned duct">
+      <div class="gv-text">
+        <p class="why-text">This is what grease buildup looks like inside a duct that's gone too long without service — and it's exactly what NFPA 96 requires kitchens to stay ahead of.</p>
+        <p class="why-text" style="margin-top:14px;">In plain terms: grease left in a hood, duct, or fan is one of the leading causes of restaurant fires. A current cleaning record is often what stands between a passed fire marshal inspection and a citation — and between a valid insurance policy and a denied claim.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Know Before You Call</span>
+      <h2 style="font-size:34px; margin-bottom:14px;">How Often &amp; What It Costs</h2>
+      <p>Frequency is based on cooking volume — not a fixed calendar.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <tr><th>Kitchen Type</th><th>Recommended Frequency</th></tr>
+        <tr><td>Solid fuel / high-volume (24hr, wok, char-broil)</td><td class="num">Every 3 months</td></tr>
+        <tr><td>Moderate-volume, full-service restaurant</td><td class="num">Every 6 months</td></tr>
+        <tr><td>Low-volume / seasonal kitchen</td><td class="num">Annually</td></tr>
+        <tr><td>Food trucks &amp; mobile kitchens</td><td class="num">Every 3–6 months</td></tr>
+      </table>
+    </div>
+
+    <div class="table-wrap" style="margin-top:40px;">
+      <table>
+        <tr><th>Service Type</th><th>Typical Range</th><
